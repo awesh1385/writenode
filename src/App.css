@@ -1,38 +1,192 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  margin: auto;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.App{
+  max-width: 1200px;
+}
+.flex {
+  display: flex;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+  height: 90vh;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Header component */
+header {
+  justify-content: space-between;
+  height: 3.7rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #f2ebe9;
+}
+
+.logo img {
+  width: 2.4rem;
+}
+
+.logo span {
+  font-size: 1.2rem;
+  padding: 0.42rem;
+}
+.nav .link {
+  padding: 0.7rem;
+  font-weight: 600;
+  color: #000;
+}
+.nav .link.active {
+  background-color: #f2ebe9;
+  border-radius: 5px;
+}
+.nav .auth {
+  border: 0px;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #302df3;
+  color: #ffffff;
+  cursor: pointer;
+}
+.nav .auth .btnIcon {
+  font-size: large;
+}
+
+@media screen and (max-width: 480px) {
+  .logo span {
+    display: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Card Component */
+.card {
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 1px 4px #f2ebe9;
+  margin: 20px 5px;
+}
+.card .title {
+  font-size: 20px;
+  margin: 20px 5px;
+  font-weight: 600;
+}
+
+.card .description {
+  font-size: 16px;
+  margin: 20px 5px;
+}
+
+.card .control {
+  font-size: 16px;
+  margin: 20px 5px;
   display: flex;
+  justify-content: space-between;
+}
+
+.card .author{
+  font-size: 14px;
+  font-weight: 500;
+  background: #1c59ae13;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.card .delete{
+  color: #ff4747;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+/* CreatePost Page */
+.create .heading{
+  text-align: center;
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.createPost{
+  display:flex;
   flex-direction: column;
+  max-width: 700px;
+  margin: 20px auto;
+}
+.createPost .title{
+  border: 0px;
+  box-shadow: 0px 1px 4px #F2EBE9;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+  margin: 10px 0px;
+}
+
+.createPost .description{
+  font-size: 20px;
+  margin: 10px 0px;
+  height: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0px;
+  box-shadow: 0px 1px 4px #F2EBE9;
+}
+
+.createPost button{
+  font-size: 18px;
+  margin: 10px 0px ;
+  padding: 15px 20px;
+  background: #5FD068;
+  border: 0px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* PageNotFound Component */
+
+.pageNotFound {
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+}
+.pageNotFound p{
+  font-size: 24px;
+  font-weight: 500;
+  margin: 25px 0px;
+}
+
+.pageNotFound img{
+  width: 100%;
+  margin: 15px auto;
+  border-radius: 5px;
+}
+
+.pageNotFound  button{
+  border: 0px;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  background:  #1C59AE;
+  color: #fff;
+  cursor: pointer;
+
+}
+
+
+/* Footer Component */
+footer {
+  border-top: 1px solid #f2ebe9;
+  height: 70px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
